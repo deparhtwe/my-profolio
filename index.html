@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Portfolio</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #0d1117;
+      color: #c9d1d9;
+    }
+    a { color: #58a6ff; text-decoration: none; }
+
+    /* Layout */
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 20px;
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 20px;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      background: #161b22;
+      border-radius: 8px;
+      padding: 20px;
+      text-align: center;
+    }
+    .avatar {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      background: #30363d;
+      margin: 0 auto 15px;
+      overflow: hidden;
+    }
+    .avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .name { font-size: 20px; font-weight: bold; }
+    .username { color: #8b949e; margin-bottom: 10px; }
+    .bio { font-size: 14px; margin-bottom: 15px; }
+
+    /* Main */
+    .main {
+      background: #0d1117;
+    }
+
+    .section {
+      background: #161b22;
+      border-radius: 8px;
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+
+    .section h2 {
+      font-size: 18px;
+      margin-bottom: 15px;
+      border-bottom: 1px solid #30363d;
+      padding-bottom: 8px;
+    }
+
+    /* Repositories */
+    .repos {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 15px;
+    }
+
+    .repo {
+      border: 1px solid #30363d;
+      border-radius: 6px;
+      padding: 15px;
+      background: #0d1117;
+    }
+
+    .repo h3 {
+      font-size: 16px;
+      margin-bottom: 8px;
+    }
+
+    .repo p {
+      font-size: 13px;
+      color: #8b949e;
+      margin-bottom: 10px;
+    }
+
+    .lang {
+      font-size: 12px;
+      color: #c9d1d9;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .container {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="avatar">
+        <img src="photo7.jpg" alt="Profile Image" />
+      </div>
+      <div class="name">Your Name</div>
+      <div class="username">@username</div>
+      <p class="bio">Web Developer | Student | Learning JavaScript</p>
+      <p><a href="#">GitHub</a> · <a href="#">LinkedIn</a></p>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main">
+      <section class="section">
+        <h2>About</h2>
+        <p>Hello! I am a developer learning HTML, CSS, and JavaScript. This is a GitHub-style portfolio page built with pure HTML & CSS.</p>
+      </section>
+
+      <section class="section">
+        <h2>Repositories</h2>
+        <div class="repos">
+          <div class="repo">
+            <h3><a href="#">portfolio-website</a></h3>
+            <p>My personal portfolio website.</p>
+            <span class="lang">HTML · CSS</span>
+          </div>
+          <div class="repo">
+            <h3><a href="#">js-projects</a></h3>
+            <p>Small JavaScript practice projects.</p>
+            <span class="lang">JavaScript</span>
+          </div>
+          <div class="repo">
+            <h3><a href="#">learning-css</a></h3>
+            <p>CSS layouts and experiments.</p>
+            <span class="lang">CSS</span>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
