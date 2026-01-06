@@ -1,151 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Portfolio</title>
-  <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      background: #0d1117;
-      color: #c9d1d9;
-    }
-    a { color: #58a6ff; text-decoration: none; }
-
-    /* Layout */
-    .container {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 20px;
-      display: grid;
-      grid-template-columns: 280px 1fr;
-      gap: 20px;
-    }
-
-    /* Sidebar */
-    .sidebar {
-      background: #161b22;
-      border-radius: 8px;
-      padding: 20px;
-      text-align: center;
-    }
-    .avatar {
-      width: 120px;
-      height: 120px;
-      border-radius: 50%;
-      background: #30363d;
-      margin: 0 auto 15px;
-      overflow: hidden;
-    }
-    .avatar img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-    .name { font-size: 20px; font-weight: bold; }
-    .username { color: #8b949e; margin-bottom: 10px; }
-    .bio { font-size: 14px; margin-bottom: 15px; }
-
-    /* Main */
-    .main {
-      background: #0d1117;
-    }
-
-    .section {
-      background: #161b22;
-      border-radius: 8px;
-      padding: 20px;
-      margin-bottom: 20px;
-    }
-
-    .section h2 {
-      font-size: 18px;
-      margin-bottom: 15px;
-      border-bottom: 1px solid #30363d;
-      padding-bottom: 8px;
-    }
-
-    /* Repositories */
-    .repos {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-      gap: 15px;
-    }
-
-    .repo {
-      border: 1px solid #30363d;
-      border-radius: 6px;
-      padding: 15px;
-      background: #0d1117;
-    }
-
-    .repo h3 {
-      font-size: 16px;
-      margin-bottom: 8px;
-    }
-
-    .repo p {
-      font-size: 13px;
-      color: #8b949e;
-      margin-bottom: 10px;
-    }
-
-    .lang {
-      font-size: 12px;
-      color: #c9d1d9;
-    }
-
-    /* Responsive */
-    @media (max-width: 768px) {
-      .container {
-        grid-template-columns: 1fr;
-      }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <title>Backend Developer | Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="container">
-    <!-- Sidebar -->
-    <aside class="sidebar">
-      <div class="avatar">
-        <img src="photo7.jpg" alt="Profile Image" />
-      </div>
-      <div class="name">Depar Htwe</div>
-      <div class="username">@depar</div>
-      <p class="bio">Backend Developer | Student | Learning JavaScript</p>
-      <p><a href="#">GitHub</a> · <a href="#">LinkedIn</a></p>
-    </aside>
 
-    <!-- Main Content -->
-    <main class="main">
-      <section class="section">
-        <h2>About</h2>
-        <p>Hello! I am a developer learning HTML, CSS, and JavaScript. This is a GitHub-style portfolio page built with pure HTML & CSS.</p>
-      </section>
+<header>
+    <div class="profile-container">
+        <img src="photo.png" alt="Profile Photo" class="profile-img">
+        <h1>Depar Htwe</h1>
+        <p>Backend Developer | Java | Python | Spring Boot</p>
+        <a href="#projects" class="btn">View Projects</a>
+    </div>
+</header>
 
-      <section class="section">
-        <h2>Repositories</h2>
-        <div class="repos">
-          <div class="repo">
-            <h3><a href="#">portfolio-website</a></h3>
-            <p>My personal portfolio website.</p>
-            <span class="lang">HTML · CSS</span>
-          </div>
-          <div class="repo">
-            <h3><a href="#">js-projects</a></h3>
-            <p>Small JavaScript practice projects.</p>
-            <span class="lang">JavaScript</span>
-          </div>
-          <div class="repo">
-            <h3><a href="#">learning-css</a></h3>
-            <p>CSS layouts and experiments.</p>
-            <span class="lang">CSS</span>
-          </div>
-        </div>
-      </section>
-    </main>
-  </div>
+
+<nav>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<section id="about">
+    <h2>About Me</h2>
+    <p>
+        I am a backend developer focused on building secure, scalable,
+        and high-performance applications. I work with Java, Spring Boot,
+        Python, REST APIs, and NLP-based security projects.
+    </p>
+</section>
+
+<section id="skills">
+    <h2>Skills</h2>
+    <div class="skills-grid">
+	  <span>C++</span>
+        <span>HTML</span>
+	  <span>CSS</span>
+        <span>Java</span>
+	  <span>PHP</span>
+        <span>JS</span>
+        <span>Spring Boot</span>
+        <span>Python</span>
+        <span>REST API</span>
+        <span>MySQL</span>
+        <span>MongoDB</span>
+        <span>NLP</span>
+        <span>Security</span>
+        <span>Git & GitHub</span>
+    </div>
+</section>
+
+<section id="projects">
+    <h2>Projects</h2>
+
+    <div class="project-card">
+        <h3>Social Engineering Attack Detection</h3>
+        <p>NLP-based system to detect phishing and manipulation text.</p>
+        <p><strong>Tech:</strong> Python, NLP, ML</p>
+        <a href="#">GitHub Repo</a>
+    </div>
+
+    <div class="project-card">
+        <h3>Spring Boot REST API</h3>
+        <p>Secure REST API with authentication and role-based access.</p>
+        <p><strong>Tech:</strong> Java, Spring Boot, JWT</p>
+        <a href="#">GitHub Repo</a>
+    </div>
+
+    <div class="project-card">
+        <h3>Hacker Forum Analyzer</h3>
+        <p>Automated analysis of hacker forum discussions using NLP.</p>
+        <p><strong>Tech:</strong> Python, NLP</p>
+        <a href="#">GitHub Repo</a>
+    </div>
+</section>
+
+<section id="contact">
+    <h2>Contact</h2>
+    <p>Email: deparhtwed@email.com</p>
+    <p>GitHub: github.com/yourusername</p>
+    <p>LinkedIn: linkedin.com/in/yourprofile</p>
+</section>
+
+<footer>
+    <p>© 2026 Depar Htwe | Backend Developer</p>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
-
